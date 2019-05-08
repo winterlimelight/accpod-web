@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+nav > a {
+    margin: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    color: black;
+    text-decoration: none;
+}
+
+nav > a:first-of-type {
+    margin-left: auto;
+}
+
+nav > a.logout {
+    border-radius: 5px; 
+    padding: 0.5em 1em;
+    color: white;
+    background: #34352F;
+}
+
