@@ -9,4 +9,15 @@
 
 #sidebar {
     width: 260px;
+    min-width: 260px;
+    background-color: #F2F2F2;
+    padding: 30px;
+}
+
+#sidebar hr {
+    border: 1px solid #939393;
+}
+
+#content {
+    padding: 77px 55px 77px 90px;
 }

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Module } from './types'
 
 @Injectable()
 export class ModuleService {
 
-    getData(): Promise<any> {
+    getData(): Promise<Module> {
         return Promise.resolve({
             "moduleID": "0d59d611-4904-4457-1c78-08d4a007e498",
             "title": "Getting Started and Introducing Your Own Business",

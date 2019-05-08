@@ -5,9 +5,24 @@
     <div id="sidebar">
         <app-usermenu></app-usermenu>
         <hr>
-        <div>app-modules</div>
+        <app-modulemenu (selectedModuleAction)="onTaskSelected($event)"></app-modulemenu>
     </div>
-    <div id="content">
-        content
+    <div id="content" *ngIf="module">
+        <h1>Module 1: {{module.title}}</h1>
+        <div>
+            <h3>Your first learning module is now live!</h3>
+            <p>You should complete this module by 8pm Friday when it will be closed for marking and a new module released Monday next week.</p>
+            <p>&nbsp;</p>
+            <p>If you have questions of comments please use the web chat feature.</p>
+            <p>We attend this char each Tuesday at 8-8:30pm.</p>
+            <p>Otherwise we aim to respond within one business day.</p>
+            <p>&nbsp;</p>
+            <p>Have fun!</p>
+        </div>
+
+        <app-moduledetail [moduleaction]="selectedModuleAction"></app-moduledetail>
+    </div>
+    <div id="content" *ngIf="!module">
+        Select a task from the left.
     </div>
 </div>
