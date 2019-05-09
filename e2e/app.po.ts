@@ -9,7 +9,6 @@ export class CourseModulePage {
     return element(by.id('content'));
   }
 
-
   getAppModuleDetailTitle() {
     return element(by.css("#content app-moduledetail h1")).getText();
   }
