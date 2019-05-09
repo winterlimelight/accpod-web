@@ -4,5 +4,24 @@ html {
     font-size: 16px;
 }
 
+h1 { 
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+h1 em {
+    font-weight: 600;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+}
+
 a { color: #0D7A91 }
 a:hover { opacity: 0.5 }

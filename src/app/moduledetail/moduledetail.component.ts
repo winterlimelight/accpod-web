@@ -1,5 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Pipe, PipeTransform  } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ModuleAction } from '../types'
+
+@Pipe({ name: 'keepHtml', pure: false })
+export class KeepHtmlPipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer){}
+
+  transform(content: any): any {
+    return this.sanitizer.bypassSecurityTrustHtml(content);
+  }
+}
 
 @Component({
   selector: 'app-moduledetail',
@@ -8,10 +18,15 @@ import { ModuleAction } from '../types'
 })
 export class ModuledetailComponent implements OnInit {
   @Input() moduleaction: ModuleAction;
+  answer: string;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  OnSubmitClick() {
+    console.log("Answer Submitted: " + this.answer);
+  }  
 
 }

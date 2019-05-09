@@ -1,5 +1,8 @@
 <div *ngIf="moduleaction">
-  <h1>{{moduleaction.title}}</h1>
-  {{moduleaction.description}}
-  <!-- TODO handle html (unsafe!?!) -->
+  <h1><em>Task {{moduleaction.actionOrder}}:</em> {{moduleaction.title}}</h1>
+  <!-- Warning - potential for malicious injection -->
+  <div [innerHTML]="moduleaction.description | keepHtml"></div>
+  <h2>Answer:</h2>
+  <textarea placeholder="Write your answer..." [(ngModel)]="answer" rows="10"></textarea>
+  <button (click)="OnSubmitClick()">Submit</button>
 </div>

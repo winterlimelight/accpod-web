@@ -8,8 +8,8 @@
         <app-modulemenu (selectedModuleAction)="onTaskSelected($event)"></app-modulemenu>
     </div>
     <div id="content" *ngIf="module">
-        <h1>Module 1: {{module.title}}</h1>
-        <div>
+        <h1><em>Module 1:</em> {{module.title}}</h1>
+        <div class="notice" style="margin-bottom: 60px;">
             <h3>Your first learning module is now live!</h3>
             <p>You should complete this module by 8pm Friday when it will be closed for marking and a new module released Monday next week.</p>
             <p>&nbsp;</p>

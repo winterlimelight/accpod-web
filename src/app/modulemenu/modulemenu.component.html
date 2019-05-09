@@ -1,7 +1,10 @@
-<ul *ngIf="module">
-  <li *ngFor="let action of module.moduleActions">
-    <span (click)="onTaskClick(action)" [class.selected]="action.moduleActionID === selectedId">
-      {{action.title}}
-    </span>
-  </li>
-</ul>
+<section *ngIf="module" class="module">
+  <h1>Module 1</h1>
+  <ul>
+    <li *ngFor="let action of module.moduleActions">
+      <span (click)="onTaskClick(action)" [class.selected]="action.moduleActionID === selectedId">
+        Task {{action.actionOrder}}
+      </span>
+    </li>
+  </ul>
+</section>

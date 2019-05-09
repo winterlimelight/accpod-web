@@ -1,0 +1,15 @@
+textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: #F2F2F2;
+    padding: 0.3em;
+    border-radius: 3px;
+}
+
+button {
+    border-radius: 5px; 
+    padding: 0.5em 1em;
+    color: white;
+    background: #34352F;
+}

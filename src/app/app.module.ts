@@ -8,7 +8,7 @@ import { ModuleService } from './module.service';
 import { HeaderComponent } from './header/header.component';
 import { UsermenuComponent } from './usermenu/usermenu.component';
 import { ModulemenuComponent } from './modulemenu/modulemenu.component';
-import { ModuledetailComponent } from './moduledetail/moduledetail.component';
+import { ModuledetailComponent, KeepHtmlPipe } from './moduledetail/moduledetail.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +16,8 @@ import { ModuledetailComponent } from './moduledetail/moduledetail.component';
         HeaderComponent,
         UsermenuComponent,
         ModulemenuComponent,
-        ModuledetailComponent
+        ModuledetailComponent,
+        KeepHtmlPipe
     ],
     imports: [
         BrowserModule,
